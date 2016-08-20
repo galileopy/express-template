@@ -1,0 +1,15 @@
+extends ../../views/layout
+block title
+    title Agregar clasificacion
+block content
+    h1 Agregar nueva clasificacion
+    form(method="post")
+        .form-group
+            label(for='nombre') Nombre
+            input.form-control(type='text', name='nombre' placeholder='nombre')
+        .form-group
+            label(for='requisito') Requisito
+            select.form-control(name='requisito')
+                each item in list
+                    option item.name
+        button.btn.btn-primary(type="submit") Guardar
